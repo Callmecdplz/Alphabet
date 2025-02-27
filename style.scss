@@ -15,61 +15,85 @@
 /* BASE RULES */
 /**************/
 
-/* ✅ 1. 复古字体 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@latest/style.css');
+/* 复古报纸风格 CSS */
 
-/* ✅ 2. 全局样式（保持单栏布局） */
+/* 全局样式 */
 body {
-    font-family: 'LXGW WenKai Lite', 'Noto Serif', serif;
-    background-color: #f8f5e1; /* 旧报纸泛黄背景 */
-    color: #3d3d3d;
-    text-align: justify;
-    filter: sepia(15%) contrast(95%) brightness(97%);
-    margin: 0;
-    padding: 20px;
-}
-
-/* ✅ 3. 让内容居中，但不过窄 */
-.container {
-    max-width: 800px; /* 让页面不会太宽 */
+    background-color: #F5F5DC; /* 米黄色背景 */
+    color: #2B2B2B; /* 深色文本 */
+    font-family: "SimSun", "Romance", "Courier New", monospace;
+    line-height: 1.8;
+    max-width: 800px;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* ✅ 4. 标题保持原来的样式 */
-h1, h2, h3 {
-    font-family: 'Romance', 'Noto Serif', serif;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/* ✅ 5. 文章内容（回归单栏，不再分两列） */
-.article-content {
-    column-count: 1;
     text-align: justify;
-    line-height: 1.6; /* 让阅读更舒适 */
 }
 
-/* ✅ 6. 复古蓝色链接 */
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Romance", "Courier New", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 5px;
+}
+
+/* 超链接样式 */
 a {
-    color: #003366;
+    color: #8B0000; /* 复古深红色 */
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* ✅ 7. “每日一句”优化 */
-#quote-box {
-    font-size: 16px;
-    font-style: italic;
-    text-align: center;
-    margin-top: 20px;
+/* 导航栏样式 */
+nav {
+    background-color: #2B2B2B;
     padding: 10px;
-    border-top: 1px dashed gray;
+    text-align: center;
+}
+
+nav a {
+    color: #F5F5DC;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* 文章样式 */
+article {
+    border-bottom: 1px dashed #2B2B2B;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 2px solid #8B0000;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typing-effect {
+    font-family: 'Courier New', Courier, monospace; /* 经典打字机字体 */
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black; /* 打字机光标 */
+    animation: typing 2s steps(30, end), blink 0.8s infinite;
+}
+body {
+    filter: sepia(20%) contrast(90%) brightness(95%);
 }
