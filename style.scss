@@ -772,16 +772,3 @@ footer {
 
 
 
-/* 页脚样式 */
-footer {
-    text-align: center;
-    font-size: 14px;
-    padding-top: 20px;
-    border-top: 2px solid #8B0000;
-}
-
-/* 打字机动画关键帧 */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
