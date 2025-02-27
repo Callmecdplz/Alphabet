@@ -19,14 +19,22 @@
 
 /* 全局样式 */
 body {
-    background-color: #F5F5DC; /* 米黄色背景 */
-    color: #2B2B2B; /* 深色文本 */
-    font-family: "SimSun", "Romance", "Courier New", monospace;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: justify;
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); /* Romance英文字体 */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@latest/style.css'); /* 霞鹜文楷 */
+
+body {
+    font-family: 'LXGW WenKai Lite', 'Noto Serif', serif; /* 设置字体 */
+    background-color: #f8f5e1; /* 旧报纸微黄底色 */
+    color: #3d3d3d; /* 复古灰色调 */
+    text-align: justify; /* 让文本更像报纸排版 */
+}
+
+h1, h2, h3 {
+    font-family: 'Romance', 'Noto Serif', serif; /* 标题采用更优雅的英文字体 */
+    font-weight: bold;
+}
+
+    
 }
 
 /* 标题样式 */
@@ -77,3 +85,34 @@ footer {
     padding-top: 20px;
     border-top: 2px solid #8B0000;
 }
+
+.article-content {
+    column-count: 2; /* 设置双栏 */
+    column-gap: 30px; /* 栏间距 */
+    text-align: justify; /* 让文本两端对齐 */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typing-effect {
+    font-family: 'Courier New', Courier, monospace; /* 经典打字机字体 */
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black; /* 打字机光标 */
+    animation: typing 2s steps(30, end), blink 0.8s infinite;
+}
+
+body {
+    filter: sepia(20%) contrast(90%) brightness(95%);
+}
+
+
+
