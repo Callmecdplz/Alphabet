@@ -1,7 +1,8 @@
 ---
 layout: page
-title: 关于
+title: 有关她们和他们的一切。
 permalink: /about/
 ---
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+一个令人不解的偶然，
+一如每个偶然。
