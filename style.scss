@@ -754,5 +754,12 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "gitalk";
+@font-face {
+    font-family: 'Romance';
+    src: url('../fonts/Romance.ttf') format('truetype');
+}
 
-
+@font-face {
+    font-family: 'SimSun';
+    src: url('../fonts/SimSun.ttf') format('truetype');
+}
