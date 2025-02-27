@@ -15,83 +15,38 @@
 /* BASE RULES */
 /**************/
 
-/* 复古报纸风格 CSS */
 
-/* 全局样式 */
-body {
-   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); /* Romance英文字体 */
+/* ✅ 1. 导入字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); /* Romance英文字体 */
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@latest/style.css'); /* 霞鹜文楷 */
 
+/* ✅ 2. 设置全局复古报纸风格 */
 body {
-    font-family: 'LXGW WenKai Lite', 'Noto Serif', serif; /* 设置字体 */
-    background-color: #f8f5e1; /* 旧报纸微黄底色 */
+    font-family: 'LXGW WenKai Lite', 'Noto Serif', serif; /* 复古中文+英文字体 */
+    background-color: #f8f5e1; /* 旧报纸泛黄背景 */
     color: #3d3d3d; /* 复古灰色调 */
-    text-align: justify; /* 让文本更像报纸排版 */
+    text-align: justify; /* 让文本像报纸排版 */
+    filter: sepia(20%) contrast(90%) brightness(95%); /* 旧报纸滤镜 */
+    margin: 0;
+    padding: 20px;
 }
 
+/* ✅ 3. 复古报纸标题 */
 h1, h2, h3 {
-    font-family: 'Romance', 'Noto Serif', serif; /* 标题采用更优雅的英文字体 */
+    font-family: 'Romance', 'Noto Serif', serif; /* 标题使用更优雅的字体 */
     font-weight: bold;
-}
-
-    
-}
-
-/* 标题样式 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Romance", "Courier New", monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #333333;
-    border-bottom: 2px solid #8B0000;
-    padding-bottom: 5px;
-}
-
-/* 超链接样式 */
-a {
-    color: #8B0000; /* 复古深红色 */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* 导航栏样式 */
-nav {
-    background-color: #2B2B2B;
-    padding: 10px;
+    text-transform: uppercase; /* 经典报纸风格大写 */
     text-align: center;
 }
 
-nav a {
-    color: #F5F5DC;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-/* 文章样式 */
-article {
-    border-bottom: 1px dashed #2B2B2B;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-/* 页脚样式 */
-footer {
-    text-align: center;
-    font-size: 14px;
-    padding-top: 20px;
-    border-top: 2px solid #8B0000;
-}
-
+/* ✅ 4. 报纸排版（多栏布局） */
 .article-content {
     column-count: 2; /* 设置双栏 */
     column-gap: 30px; /* 栏间距 */
     text-align: justify; /* 让文本两端对齐 */
 }
 
+/* ✅ 5. 打字机打字动画 */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -110,8 +65,55 @@ footer {
     animation: typing 2s steps(30, end), blink 0.8s infinite;
 }
 
-body {
-    filter: sepia(20%) contrast(90%) brightness(95%);
+/* ✅ 6. 纽约时报风格的主页布局 */
+.news-header {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-article {
+    width: 48%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ✅ 7. “每日一句” 复古名言 */
+#quote-box {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px dashed gray;
+}
+
+/* ✅ 8. 链接样式（复古蓝色） */
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ 9. 让博客整体更像旧报纸 */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* 让内容有一点泛旧感 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 
