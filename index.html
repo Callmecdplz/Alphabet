@@ -113,6 +113,51 @@ layout: default
   <p id="daily-quote"></p>
 </div>
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet 博客</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="typing-effect">欢迎来到 Alphabet 博客</h1>
+
+    <div class="news-header">The Alphabet Times</div>
+
+    <div class="news-section">
+        <div class="news-article">
+            <h2><a href="/post1">今天，哥哥给我买了GBA！</a></h2>
+            <p>我和我姐姐去捉蝴蝶了————勿念。...</p>
+        </div>
+        <div class="news-article">
+            <h2><a href="/post2">你叫塞西莉娅？</a></h2>
+            <p>是呀，我从纽约来...</p>
+        </div>
+    </div>
+
+    <div class="article-content">
+        <p>这里是正文内容... 文章会自动变成 **双栏排版**，像老报纸一样...</p>
+    </div>
+
+    <div id="quote-box">
+        <p id="daily-quote"></p>
+    </div>
+
+    <script>
+        const quotes = [
+            "希望，带着羽毛。",
+            "相信向日葵的人不会在屋内沉思。一切爱的思想，都将变成他的思想。你在本质上始终是诗人，始终在爱的顶点上，始终渴望真理和正义。",
+            "我的爱，什么也没有结束。"
+        ];
+        document.getElementById("daily-quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
+
+</body>
+</html>
+
 
 
 
