@@ -67,11 +67,6 @@ footer-links:
 # 站点页脚的文字
 footer-text: Copyright (c) 2025 来日方长
 
-daily-quotes:
-  - "它仿佛早就在那里，我的头，任何人，每个人的头——"
-  - "既不会太晚也不会太远。"
-  - "我偏爱敲击木头。"
-
 #
 # 评论，注意，请不要同时添加多种不同的评论区
 #
@@ -130,4 +125,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
