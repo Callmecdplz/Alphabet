@@ -86,14 +86,3 @@ footer {
     50% { border-color: transparent; }
 }
 
-.typing-effect {
-    font-family: 'Courier New', Courier, monospace; /* 经典打字机字体 */
-    font-size: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid black; /* 打字机光标 */
-    animation: typing 2s steps(30, end), blink 0.8s infinite;
-}
-body {
-    filter: sepia(20%) contrast(90%) brightness(95%);
-}
